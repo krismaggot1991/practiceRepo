@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    plataform: h2
+    url: jdbc:h2:mem:testdb
+  h2:
+    console:
+      enabled: true

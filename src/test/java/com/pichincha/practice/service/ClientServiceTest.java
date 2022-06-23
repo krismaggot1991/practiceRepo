@@ -7,6 +7,7 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import com.pichincha.practice.domain.dto.client.request.ClientRequest;
 import com.pichincha.practice.domain.jpa.Client;
 import com.pichincha.practice.repository.ClientRepository;
 import com.pichincha.practice.service.impl.ClientServiceImpl;
@@ -46,10 +47,10 @@ class ClientServiceTest {
   void shouldSaveNewClient() {
     getCounter();
     when(clientRepository.save(any())).thenReturn(getValidClient());
-    Client clientSaved = clientService.saveClient(any());
-    assertNotNull(clientSaved);
-    assertEquals("Enrique", clientSaved.getNameType());
+    Client clientSaved = clientService.saveClient(ClientRequest.builder().build());
     setCounter(counter);
+    assertNotNull(clientSaved);
+    assertEquals("1803750312", clientSaved.getIdentification());
     Assertions.assertSame(1, counter);
   }
 
@@ -63,6 +64,7 @@ class ClientServiceTest {
     return Client.builder()
         .id(1L)
         .nameType("Enrique")
+        .identification("1803750312")
         .build();
   }
 

@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,6 +27,13 @@ public class Client {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   Long id;
 
+  @NotEmpty(message = "nameType is empty")
+  @NotNull(message = "nameType cant be null")
   String nameType;
+
+  @NotEmpty(message = "identification is empty")
+  @NotNull(message = "identification cant be null")
+  @Size(min = 5, max = 10, message
+      = "identification must be between 5 and 10 characters")
   String identification;
 }

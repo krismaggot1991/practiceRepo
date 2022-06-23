@@ -21,6 +21,9 @@ public class ClientServiceImpl implements ClientService {
 
   @Override
   public Client saveClient(ClientRequest clientRequest) {
-    return null;
+    return clientRepository.save(Client.builder()
+        .identification(clientRequest.getIdentification())
+        .nameType("Quemado")
+        .build());
   }
 }

@@ -32,6 +32,8 @@ dependencies {
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.junit.vintage:junit-vintage-engine'
+    testImplementation 'com.h2database:h2'
 }
 
 tasks.named('test') {

@@ -1,5 +1,6 @@
 package com.pichincha.practice.service.impl;
 
+import com.pichincha.practice.domain.dto.client.request.ClientRequest;
 import com.pichincha.practice.domain.jpa.Client;
 import com.pichincha.practice.repository.ClientRepository;
 import com.pichincha.practice.service.ClientService;
@@ -16,5 +17,10 @@ public class ClientServiceImpl implements ClientService {
   @Override
   public List<Client> getAllClients() {
     return clientRepository.findAll();
+  }
+
+  @Override
+  public Client saveClient(ClientRequest clientRequest) {
+    return null;
   }
 }

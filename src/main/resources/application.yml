@@ -10,3 +10,7 @@ server:
   port: 8080
   servlet:
     context-path: /testChapter/api
+
+practice:
+  ws:
+    client-information: 'https://run.mocky.io/v3/e808fe9e-4fb4-414d-a9fb-c147c6e0b84c'

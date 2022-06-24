@@ -35,7 +35,6 @@ public class ClientController {
   @PostMapping("/saveClient")
   @Produces("application/json")
   public ResponseEntity<ClientResponse> saveClient(@RequestBody @Valid ClientRequest clientRequest) {
-    log.info("Entra a guardar");
     return new ResponseEntity<>(clientMapper.toDTO(clientService.saveClient(clientRequest)), HttpStatus.OK);
   }
 }

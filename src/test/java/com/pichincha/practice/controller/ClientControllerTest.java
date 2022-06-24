@@ -15,6 +15,7 @@ import com.pichincha.practice.service.ClientService;
 import com.pichincha.practice.service.mapper.ClientMapper;
 import java.util.ArrayList;
 import java.util.List;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -39,6 +40,7 @@ class ClientControllerTest {
   ClientMapper clientMapper;
 
   @Test
+  @DisplayName("Should do something")
   void shouldRetrieveAllClientsAndReturnOkStatus() throws Exception {
     String url = String.format("/client/getAll");
 

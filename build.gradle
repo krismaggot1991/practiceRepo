@@ -24,6 +24,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.mapstruct:mapstruct:1.5.2.Final'
     implementation 'javax.ws.rs:javax.ws.rs-api:2.0.1'
+    implementation 'com.google.code.gson:gson:2.8.7'
 
     compileOnly 'org.projectlombok:lombok'
 
